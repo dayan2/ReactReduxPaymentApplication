@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { saveCard } from "../../actions/index";
-import PaymentForm from "../../Components/PaymentForm/index";
+import PaymentForm from "../../components/PaymentForm/index";
 
 class App extends Component {
   constructor(props) {
@@ -10,10 +10,10 @@ class App extends Component {
     this.saveCard = this.saveCard.bind(this);
   }
 
-  saveCard(card) {    
+  saveCard(card) {
     this.props.saveCard(card);
   }
-  
+
   render() {
     return (
         <PaymentForm saveCard={this.saveCard} />
